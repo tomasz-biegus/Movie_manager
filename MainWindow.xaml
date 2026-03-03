@@ -5,8 +5,88 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt_prog"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="600" Width="920"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="transparent"
+        AllowsTransparency="True">
 
-    </Grid>
+    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Background="#8C92AC">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="App"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    Margin="20,0,0,0"
+                    Foreground="#8D4004"
+                    FontSize="25"
+                    FontWeight="ExtraBold"/>
+
+            <StackPanel Grid.Row="1">
+
+                <Label Content="Do obejrzenia"
+                       Height="75"
+                       VerticalContentAlignment="Center"
+                       Foreground="#8D4004"
+                       FontSize="25">
+                    <Label.Style>
+                        <Style TargetType="Label">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#9CA2AC"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Label.Style>
+                </Label>
+                <Label Content="Obejrzane"
+                       Height="75"
+                       VerticalContentAlignment="Center"
+                       Foreground="#8D4004"
+                       FontSize="25">
+                    <Label.Style>
+                        <Style TargetType="Label">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#9CA2AC"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Label.Style>
+                </Label>
+                <Label Content="Ustawienia"
+                       Height="75"
+                       VerticalContentAlignment="Center"
+                       Foreground="#8D4004"
+                       FontSize="25">
+                    <Label.Style>
+                        <Style TargetType="Label">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#9CA2AC"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Label.Style>
+                </Label>
+
+
+            </StackPanel>
+
+            <TextBox Grid.Column="1"
+                     VerticalContentAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Margin="5"
+                     Style="{StaticResource Wyszukiwarka}"/>
+
+        </Grid>
+    </Border>
 </Window>
