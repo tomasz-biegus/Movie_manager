@@ -9,6 +9,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="TextBoxWyszukiwarka.xaml"/>
+                <ResourceDictionary Source="Przyciski.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:DoObejrzeniaViewModel}">

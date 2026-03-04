@@ -16,6 +16,7 @@
         <viewModel:MainViewModel/>
     </Window.DataContext>
     
+    <!--grid-->
     <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Background="#8C92AC">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -27,6 +28,21 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
+    <!--close button-->
+            <Button Content="✕"
+                    Grid.Column="1"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Margin="0,0,15,0"
+                    Width="30" Height="30"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Foreground="#8D4004"
+                    FontSize="16"
+                    Cursor="Hand" Click="Button_Click" 
+                    />
+            
+            <!--title bar-->
             <TextBlock Text="App"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
@@ -34,14 +50,15 @@
                     Foreground="#8D4004"
                     FontSize="25"
                     FontWeight="ExtraBold"/>
-
+    <!--menu bar-->
             <StackPanel Grid.Row="1">
 
                 <Label Content="Do obejrzenia"
                        Height="75"
                        VerticalContentAlignment="Center"
                        Foreground="#8D4004"
-                       FontSize="25">
+                       FontSize="25"
+                       Cursor="Hand" >
                     <Label.InputBindings>
                         <MouseBinding MouseAction="LeftClick" 
                       Command="{Binding DoObejrzeniaViewCommand}"/>
@@ -60,7 +77,8 @@
                        Height="75"
                        VerticalContentAlignment="Center"
                        Foreground="#8D4004"
-                       FontSize="25">
+                       FontSize="25"
+                       Cursor="Hand" >
                     <Label.InputBindings>
                         <MouseBinding MouseAction="LeftClick" 
                       Command="{Binding ObejrzaneViewCommand}"/>
@@ -79,7 +97,8 @@
                        Height="75"
                        VerticalContentAlignment="Center"
                        Foreground="#8D4004"
-                       FontSize="25">
+                       FontSize="25"
+                       Cursor="Hand" >
                     <Label.InputBindings>
                         <MouseBinding MouseAction="LeftClick" 
                       Command="{Binding UstawieniaViewCommand}"/>
@@ -94,16 +113,38 @@
                         </Style>
                     </Label.Style>
                 </Label>
+             </StackPanel>
 
-
-            </StackPanel>
-
+    <!--serch bar and buttons-->
             <TextBox Grid.Column="1"
                      VerticalContentAlignment="Center"
                      HorizontalAlignment="Left"
                      Margin="5"
+                     Cursor="Hand" 
                      Style="{StaticResource Wyszukiwarka}"/>
 
+
+            <Button Grid.Column="1"
+                Content="Dodaj"
+                Margin="-200,0,0,0"
+                Cursor="Hand" 
+                Style="{StaticResource PrzyciskMenu}"
+                Click="OpenWindowDodaj"/>
+
+            <Button Grid.Column="1"
+                Content="Usuń"
+                Margin="0,0,0,0"
+                Cursor="Hand" 
+                Style="{StaticResource PrzyciskMenu}"
+                />
+
+            <Button Grid.Column="1"
+                Content="Edytuj"
+                Margin="200,0,0,0"
+                Cursor="Hand" 
+                Style="{StaticResource PrzyciskMenu}" Click="OpenWindowEdytuj"
+                />
+    <!--content view control-->
             <ContentControl Grid.Column="1" Grid.Row="1"
                             Margin="10"
                             Content="{Binding CurrentView}"/>

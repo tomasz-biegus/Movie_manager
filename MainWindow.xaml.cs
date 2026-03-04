@@ -18,5 +18,21 @@ namespace Projekt_prog
         {
             InitializeComponent();
         }
+
+        private void OpenWindowDodaj(object sender, RoutedEventArgs e)
+        {
+            Dodaj objdodajWindow = new Dodaj();
+            objdodajWindow.Show();
+        }
+        private void OpenWindowEdytuj(object sender, RoutedEventArgs e)
+        {
+            Edytuj objedytujWindow = new Edytuj();
+            objedytujWindow.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
