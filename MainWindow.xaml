@@ -80,6 +80,10 @@
                        VerticalContentAlignment="Center"
                        Foreground="#8D4004"
                        FontSize="25">
+                    <Label.InputBindings>
+                        <MouseBinding MouseAction="LeftClick" 
+                      Command="{Binding UstawieniaViewCommand}"/>
+                    </Label.InputBindings>
                     <Label.Style>
                         <Style TargetType="Label">
                             <Style.Triggers>

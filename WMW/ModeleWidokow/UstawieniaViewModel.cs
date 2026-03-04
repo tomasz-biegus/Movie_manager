@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt_prog.WMW.ModeleWidokow
 {
-    class DoObejrzeniaViewModel
+    internal class UstawieniaViewModel
     {
     }
 }

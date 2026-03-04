@@ -13,9 +13,14 @@ namespace Projekt_prog.WMW.ModeleWidokow
 
         public Relay ObejrzaneViewCommand { get; set; }
 
+        public Relay UstawieniaViewCommand { get; set; }
+
         public DoObejrzeniaViewModel DoObejrzeniaVM { get; set; }
 
         public ObejrzaneViewModel ObejrzaneVM { get; set; }
+
+        public UstawieniaViewModel UstawieniaVM { get; set; }
+
 
         private object _currentView;
 
@@ -35,6 +40,7 @@ namespace Projekt_prog.WMW.ModeleWidokow
         {
             DoObejrzeniaVM = new DoObejrzeniaViewModel();
             ObejrzaneVM = new ObejrzaneViewModel();
+            UstawieniaVM = new UstawieniaViewModel();
             CurrentView = DoObejrzeniaVM;
 
             DoObejrzeniaViewCommand = new Relay(o =>
@@ -44,6 +50,10 @@ namespace Projekt_prog.WMW.ModeleWidokow
             ObejrzaneViewCommand = new Relay(o =>
             {
                 CurrentView = ObejrzaneVM;
+            });
+            UstawieniaViewCommand = new Relay(o =>
+            {
+                CurrentView = UstawieniaVM;
             });
         }
 
