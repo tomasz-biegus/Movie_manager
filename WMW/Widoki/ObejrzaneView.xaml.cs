@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -9,12 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Projekt_prog
+namespace Projekt_prog.WMW.Widoki
 {
-
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Logika interakcji dla klasy ObejrzaneView.xaml
+    /// </summary>
+    public partial class ObejrzaneView : UserControl
     {
-        public MainWindow()
+        public ObejrzaneView()
         {
             InitializeComponent();
         }

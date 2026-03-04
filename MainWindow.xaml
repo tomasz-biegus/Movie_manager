@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:Projekt_prog.WMW.ModeleWidokow"
         xmlns:local="clr-namespace:Projekt_prog"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="920"
@@ -11,6 +12,10 @@
         Background="transparent"
         AllowsTransparency="True">
 
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    
     <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Background="#8C92AC">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -37,6 +42,10 @@
                        VerticalContentAlignment="Center"
                        Foreground="#8D4004"
                        FontSize="25">
+                    <Label.InputBindings>
+                        <MouseBinding MouseAction="LeftClick" 
+                      Command="{Binding DoObejrzeniaViewCommand}"/>
+                    </Label.InputBindings>
                     <Label.Style>
                         <Style TargetType="Label">
                             <Style.Triggers>
@@ -52,6 +61,10 @@
                        VerticalContentAlignment="Center"
                        Foreground="#8D4004"
                        FontSize="25">
+                    <Label.InputBindings>
+                        <MouseBinding MouseAction="LeftClick" 
+                      Command="{Binding ObejrzaneViewCommand}"/>
+                    </Label.InputBindings>
                     <Label.Style>
                         <Style TargetType="Label">
                             <Style.Triggers>
@@ -86,6 +99,14 @@
                      HorizontalAlignment="Left"
                      Margin="5"
                      Style="{StaticResource Wyszukiwarka}"/>
+
+            <ContentControl Grid.Column="1" Grid.Row="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+
+
+
+
 
         </Grid>
     </Border>
