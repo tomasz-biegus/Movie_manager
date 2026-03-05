@@ -21,13 +21,15 @@ namespace Projekt_prog
 
         private void OpenWindowDodaj(object sender, RoutedEventArgs e)
         {
-            Dodaj objdodajWindow = new Dodaj();
-            objdodajWindow.Show();
+            var okno = new Dodaj();
+            okno.AddBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(App.AktualnyKolor));
+            okno.ShowDialog(); ;
         }
         private void OpenWindowEdytuj(object sender, RoutedEventArgs e)
         {
-            Edytuj objedytujWindow = new Edytuj();
-            objedytujWindow.Show();
+            var okno = new Edytuj();
+            okno.EditBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(App.AktualnyKolor));
+            okno.ShowDialog();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

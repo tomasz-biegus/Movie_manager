@@ -10,7 +10,7 @@
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True">
-    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Background="#8C92AC">
+    <Border x:Name="AddBorder" BorderBrush="Black" BorderThickness="2" CornerRadius="20" Background="#ACACAC">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="75"/>
@@ -86,10 +86,10 @@
                 <ComboBox Grid.Row="1" Grid.Column="1"
                           Height="35"
                           Background="#353340"
-                          Foreground="#CFCFCF"
+                          Foreground="#353340"
                           BorderThickness="0"
                           FontSize="13"
-                          SelectedItem="{Binding Gatunek}">
+                          SelectedItem="{Binding Gatunek}" Cursor="">
                     <ComboBoxItem>Akcja</ComboBoxItem>
                     <ComboBoxItem>Komedia</ComboBoxItem>
                     <ComboBoxItem>Dramat</ComboBoxItem>
@@ -134,7 +134,7 @@
                 <ComboBox Grid.Row="3" Grid.Column="1"
                           Height="35"
                           Background="#353340"
-                          Foreground="#CFCFCF"
+                          Foreground="#353340"
                           BorderThickness="0"
                           FontSize="13"
                           SelectedItem="{Binding Ocena}">
@@ -154,7 +154,7 @@
                 <ComboBox Grid.Row="4" Grid.Column="1"
                           Height="35"
                           Background="#353340"
-                          Foreground="#CFCFCF"
+                          Foreground="#353340"
                           BorderThickness="0"
                           FontSize="13"
                           SelectedItem="{Binding Status}">

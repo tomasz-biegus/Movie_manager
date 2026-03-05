@@ -17,7 +17,7 @@
     </Window.DataContext>
     
     <!--grid-->
-    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Background="#8C92AC">
+    <Border x:Name="MainBorder"  BorderBrush="Black" BorderThickness="1" CornerRadius="20" Background="#CDCDCD">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -43,7 +43,7 @@
                     />
             
             <!--title bar-->
-            <TextBlock Text="App"
+            <TextBlock Text="Projekt"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
                     Margin="20,0,0,0"
@@ -142,7 +142,8 @@
                 Content="Edytuj"
                 Margin="200,0,0,0"
                 Cursor="Hand" 
-                Style="{StaticResource PrzyciskMenu}" Click="OpenWindowEdytuj"
+                Style="{StaticResource PrzyciskMenu}"
+                Click="OpenWindowEdytuj"
                 />
     <!--content view control-->
             <ContentControl Grid.Column="1" Grid.Row="1"

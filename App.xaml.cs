@@ -9,6 +9,7 @@ namespace Projekt_prog
     /// </summary>
     public partial class App : Application
     {
+        public static string AktualnyKolor { get; set; } = "#CDCDCD";
     }
 
 }

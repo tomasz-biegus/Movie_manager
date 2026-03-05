@@ -24,5 +24,23 @@ namespace Projekt_prog.WMW.Widoki
         {
             InitializeComponent();
         }
+
+        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            if (mainWindow == null) return;
+
+            mainWindow.MainBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#CDCDCD"));
+            App.AktualnyKolor = "#CDCDCD";
+        }
+
+        private void TextBlock_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            if (mainWindow == null) return;
+
+            mainWindow.MainBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#676767"));
+            App.AktualnyKolor = "#676767";
+        }
     }
 }

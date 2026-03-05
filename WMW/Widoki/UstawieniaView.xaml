@@ -6,12 +6,98 @@
              xmlns:local="clr-namespace:Projekt_prog.WMW.Widoki"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel>
+    <StackPanel Margin="30">
+
+        <!-- Nagłówek -->
         <TextBlock Text="Ustawienia"
                    HorizontalAlignment="Left"
-                   Margin="0,0,0,20"
+                   Margin="0,0,0,30"
                    Foreground="#8D4004"
                    FontSize="34"
                    FontWeight="ExtraBold"/>
+
+        <!-- Sekcja motywu -->
+        <TextBlock Text="Wygląd"
+                   FontSize="16"
+                   FontWeight="SemiBold"
+                   Margin="0,0,0,10"/>
+
+        <Border CornerRadius="10"
+                Padding="20"
+                Margin="0,0,0,10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                    <TextBlock Text="Motyw aplikacji"
+                               FontSize="14"
+                               FontWeight="SemiBold"/>
+                    <TextBlock FontSize="12"
+                               Margin="0,4,0,0"/>
+                </StackPanel>
+
+                <!-- Toggle ciemny/jasny -->
+                <Border Grid.Column="1"
+                        Width="120" Height="40"
+                        CornerRadius="20"
+                        Cursor="Hand"
+                        VerticalAlignment="Center">
+                    
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="☀️"
+                                   Grid.Column="0"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="16"
+                                   MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
+                        <TextBlock Text="🌙"
+                                   Grid.Column="1"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="16" 
+                                   MouseLeftButtonDown="TextBlock_MouseLeftButtonDown_1"
+                                   />
+
+
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+
+        <!-- Podgląd kolorów motywu -->
+        <TextBlock Text="Podgląd"
+                   FontSize="16"
+                   FontWeight="SemiBold"
+                   Margin="0,20,0,10"/>
+
+        <Border CornerRadius="10"
+                Padding="20">
+            <StackPanel>
+                <TextBlock Text="Przykładowy tytuł filmu"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Margin="0,0,0,5"/>
+                <TextBlock Text="Gatunek: Akcja  •  Rok: 2023  •  Ocena: ⭐⭐⭐⭐"
+                           FontSize="12"
+                           Margin="0,0,0,10"/>
+                <Border CornerRadius="6"
+                        Padding="10,5"
+                        HorizontalAlignment="Left">
+                    <TextBlock Text="Obejrzany"
+                               Foreground="#8D4004"
+                               FontSize="12"
+                               FontWeight="SemiBold"/>
+                </Border>
+            </StackPanel>
+        </Border>
+
     </StackPanel>
 </UserControl>
