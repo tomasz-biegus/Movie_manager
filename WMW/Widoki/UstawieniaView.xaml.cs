@@ -32,6 +32,8 @@ namespace Projekt_prog.WMW.Widoki
 
             mainWindow.MainBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#CDCDCD"));
             App.AktualnyKolor = "#CDCDCD";
+            App.ZmienMotyw(ciemny: false);
+
         }
 
         private void TextBlock_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
@@ -41,6 +43,7 @@ namespace Projekt_prog.WMW.Widoki
 
             mainWindow.MainBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#676767"));
             App.AktualnyKolor = "#676767";
+            App.ZmienMotyw(ciemny: true);
         }
     }
 }

@@ -6,18 +6,18 @@
         xmlns:viewModel="clr-namespace:Projekt_prog.WMW.ModeleWidokow"
         xmlns:local="clr-namespace:Projekt_prog"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="920"
-        WindowStyle="None"
-        ResizeMode="NoResize"
-        Background="transparent"
-        AllowsTransparency="True">
+        Title="MainWindow" Height="600" Width="920" MinHeight="600" MinWidth="920"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="CanResize"
+        Background="transparent">
+        
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
     
     <!--grid-->
-    <Border x:Name="MainBorder"  BorderBrush="Black" BorderThickness="1" CornerRadius="20" Background="#CDCDCD">
+    <Border x:Name="MainBorder"  BorderBrush="Black" BorderThickness="1" CornerRadius="10" Background="#CDCDCD">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -37,7 +37,7 @@
                     Width="30" Height="30"
                     Background="Transparent"
                     BorderThickness="0"
-                    Foreground="#8D4004"
+                    Foreground="{DynamicResource TextBrush}"
                     FontSize="16"
                     Cursor="Hand" Click="Button_Click" 
                     />
@@ -47,7 +47,7 @@
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
                     Margin="20,0,0,0"
-                    Foreground="#8D4004"
+                    Foreground="{DynamicResource TextBrush}"
                     FontSize="25"
                     FontWeight="ExtraBold"/>
     <!--menu bar-->
@@ -56,7 +56,7 @@
                 <Label Content="Do obejrzenia"
                        Height="75"
                        VerticalContentAlignment="Center"
-                       Foreground="#8D4004"
+                       Foreground="{DynamicResource TextBrush}"
                        FontSize="25"
                        Cursor="Hand" >
                     <Label.InputBindings>
@@ -67,7 +67,7 @@
                         <Style TargetType="Label">
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#9CA2AC"/>
+                                    <Setter Property="Background" Value="{DynamicResource MenuHoverBrush}"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -76,7 +76,7 @@
                 <Label Content="Obejrzane"
                        Height="75"
                        VerticalContentAlignment="Center"
-                       Foreground="#8D4004"
+                       Foreground="{DynamicResource TextBrush}"
                        FontSize="25"
                        Cursor="Hand" >
                     <Label.InputBindings>
@@ -87,7 +87,7 @@
                         <Style TargetType="Label">
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#9CA2AC"/>
+                                    <Setter Property="Background" Value="{DynamicResource MenuHoverBrush}"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -96,7 +96,7 @@
                 <Label Content="Ustawienia"
                        Height="75"
                        VerticalContentAlignment="Center"
-                       Foreground="#8D4004"
+                       Foreground="{DynamicResource TextBrush}"
                        FontSize="25"
                        Cursor="Hand" >
                     <Label.InputBindings>
@@ -107,7 +107,7 @@
                         <Style TargetType="Label">
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#9CA2AC"/>
+                                    <Setter Property="Background" Value="{DynamicResource MenuHoverBrush}"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>

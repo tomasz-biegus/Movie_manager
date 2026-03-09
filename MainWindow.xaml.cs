@@ -23,6 +23,7 @@ namespace Projekt_prog
         {
             var okno = new Dodaj();
             okno.AddBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(App.AktualnyKolor));
+
             okno.ShowDialog(); ;
         }
         private void OpenWindowEdytuj(object sender, RoutedEventArgs e)

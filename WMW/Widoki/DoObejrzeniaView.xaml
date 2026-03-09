@@ -11,7 +11,7 @@
         <TextBlock Text="Do Obejrzenia"
                    HorizontalAlignment="Left"
                    Margin="0,0,0,20"
-                   Foreground="#8D4004"
+                   Foreground="{DynamicResource SubTextBrush}"
                    FontSize="34"
                    FontWeight="ExtraBold"/> 
     </StackPanel>

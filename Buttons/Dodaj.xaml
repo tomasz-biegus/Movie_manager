@@ -22,7 +22,7 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
                        Margin="20,0,0,0"
-                       Foreground="#8D4004"
+                       Foreground="{DynamicResource SubTextBrush}"
                        FontSize="25"
                        FontWeight="ExtraBold"/>
 
