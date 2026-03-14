@@ -34,9 +34,28 @@ namespace Projekt_prog
         }
         private void OpenWindowEdytuj(object sender, RoutedEventArgs e)
         {
-            var okno = new Edytuj();
-            okno.EditBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(App.AktualnyKolor));
+            Film? wybrany = null;
+
+            var homeView = FindVisualChild<HomeView>(this);
+            var obejrzaneView = FindVisualChild<ObejrzaneView>(this);
+
+            if (homeView != null && homeView.FilmyList.SelectedItem is Film film1)
+                wybrany = film1;
+            else if (obejrzaneView != null && obejrzaneView.FilmyList.SelectedItem is Film film2)
+                wybrany = film2;
+
+            if (wybrany == null)
+            {
+                MessageBox.Show("Wybierz film z listy!", "Błąd",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            var okno = new Edytuj(wybrany);
+            okno.EditBorder.Background =
+                new SolidColorBrush((Color)ColorConverter.ConvertFromString(App.AktualnyKolor));
             okno.ShowDialog();
+
             var mainVM = DataContext as MainViewModel;
             mainVM?.OdswiezWidok();
         }

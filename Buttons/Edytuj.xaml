@@ -54,12 +54,13 @@
                 </Grid.RowDefinitions>
 
                 <!-- movie title -->
-                <TextBlock Text="Tytuł:"
+                <TextBlock  Text="Tytuł:"
                            Grid.Row="0" Grid.Column="0"
                            VerticalAlignment="Center"
                            Foreground="#2B2B2B"
                            FontSize="14" FontWeight="SemiBold"/>
-                <TextBox Grid.Row="0" Grid.Column="1"
+                <TextBox x:Name="TytulBox"
+                         Grid.Row="0" Grid.Column="1"
                          Height="35"
                          VerticalContentAlignment="Center"
                          Padding="8,0"
@@ -67,8 +68,7 @@
                          Foreground="#CFCFCF"
                          CaretBrush="#CFCFCF"
                          BorderThickness="0"
-                         FontSize="13"
-                         Text="{Binding Tytul, UpdateSourceTrigger=PropertyChanged}">
+                         FontSize="13">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="8"/>
@@ -82,13 +82,13 @@
                            VerticalAlignment="Center"
                            Foreground="#2B2B2B"
                            FontSize="14" FontWeight="SemiBold"/>
-                <ComboBox Grid.Row="1" Grid.Column="1"
+                <ComboBox x:Name="GatunekBox"
+                          Grid.Row="1" Grid.Column="1"
                           Height="35"
                           Background="#353340"
                           Foreground="#353340"
                           BorderThickness="0"
-                          FontSize="13"
-                          SelectedItem="{Binding Gatunek}">
+                          FontSize="13">
                     <ComboBoxItem>Akcja</ComboBoxItem>
                     <ComboBoxItem>Komedia</ComboBoxItem>
                     <ComboBoxItem>Dramat</ComboBoxItem>
@@ -107,7 +107,10 @@
                            VerticalAlignment="Center"
                            Foreground="#2B2B2B"
                            FontSize="14" FontWeight="SemiBold"/>
-                <TextBox Grid.Row="2" Grid.Column="1"
+                <TextBox x:Name="RokBox"
+                         PreviewTextInput="RokBox_PreviewTextInput"
+                         LostFocus="RokBox_LostFocus"
+                         Grid.Row="2" Grid.Column="1"
                          Height="35"
                          VerticalContentAlignment="Center"
                          Padding="8,0"
@@ -115,8 +118,7 @@
                          Foreground="#CFCFCF"
                          CaretBrush="#CFCFCF"
                          BorderThickness="0"
-                         FontSize="13"
-                         Text="{Binding Rok, UpdateSourceTrigger=PropertyChanged}">
+                         FontSize="13">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="8"/>
@@ -130,13 +132,13 @@
                            VerticalAlignment="Center"
                            Foreground="#2B2B2B"
                            FontSize="14" FontWeight="SemiBold"/>
-                <ComboBox Grid.Row="3" Grid.Column="1"
+                <ComboBox x:Name="OcenaBox"
+                          Grid.Row="3" Grid.Column="1"
                           Height="35"
                           Background="#353340"
                           Foreground="#353340"
                           BorderThickness="0"
-                          FontSize="13"
-                          SelectedItem="{Binding Ocena}">
+                          FontSize="13">
                     <ComboBoxItem>⭐ 1 - Słaby</ComboBoxItem>
                     <ComboBoxItem>⭐⭐ 2 - Przeciętny</ComboBoxItem>
                     <ComboBoxItem>⭐⭐⭐ 3 - Dobry</ComboBoxItem>
@@ -150,13 +152,13 @@
                            VerticalAlignment="Center"
                            Foreground="#2B2B2B"
                            FontSize="14" FontWeight="SemiBold"/>
-                <ComboBox Grid.Row="4" Grid.Column="1"
+                <ComboBox x:Name="StatusBox"
+                          Grid.Row="4" Grid.Column="1"
                           Height="35"
                           Background="#353340"
                           Foreground="#353340"
                           BorderThickness="0"
-                          FontSize="13"
-                          SelectedItem="{Binding Status}">
+                          FontSize="13">
                     <ComboBoxItem>Obejrzany</ComboBoxItem>
                     <ComboBoxItem>Do obejrzenia</ComboBoxItem>
                 </ComboBox>
@@ -170,7 +172,7 @@
                             Width="120" Height="38"
                             Margin="0,0,10,0"
                             Cursor="Hand"
-                            Command="{Binding ZapiszCommand}">
+                            Click="Zapisz_Click">
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Background" Value="#8D4004"/>
