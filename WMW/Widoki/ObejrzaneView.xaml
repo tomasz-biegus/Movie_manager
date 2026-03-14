@@ -6,8 +6,14 @@
              xmlns:local="clr-namespace:Projekt_prog.WMW.Widoki"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel Margin="20">
-        <TextBlock Text="Obejrzane"
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="0"
+                   Text="Obejrzane"
                    HorizontalAlignment="Left"
                    Margin="0,0,0,20"
                    Foreground="{DynamicResource SubTextBrush}"
@@ -15,6 +21,7 @@
                    FontWeight="ExtraBold"/>
 
         <ListView x:Name="FilmyList"
+                  Grid.Row="1"
                   ItemsSource="{Binding Filmy}"
                   Background="Transparent"
                   BorderThickness="0">
@@ -80,5 +87,5 @@
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>
-    </StackPanel>
+    </Grid>
 </UserControl>

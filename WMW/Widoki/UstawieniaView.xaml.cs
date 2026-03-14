@@ -30,8 +30,8 @@ namespace Projekt_prog.WMW.Widoki
             var mainWindow = Application.Current.MainWindow as MainWindow;
             if (mainWindow == null) return;
 
-            mainWindow.MainBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#CDCDCD"));
-            App.AktualnyKolor = "#CDCDCD";
+            mainWindow.MainBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FAF0E6"));
+            App.AktualnyKolor = "#FAF0E6";
             App.ZmienMotyw(ciemny: false);
 
         }
@@ -41,8 +41,8 @@ namespace Projekt_prog.WMW.Widoki
             var mainWindow = Application.Current.MainWindow as MainWindow;
             if (mainWindow == null) return;
 
-            mainWindow.MainBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#676767"));
-            App.AktualnyKolor = "#676767";
+            mainWindow.MainBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#452916"));
+            App.AktualnyKolor = "#2C1A0E";
             App.ZmienMotyw(ciemny: true);
         }
     }

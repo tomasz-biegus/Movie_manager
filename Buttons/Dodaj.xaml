@@ -10,7 +10,7 @@
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True">
-    <Border x:Name="AddBorder" BorderBrush="Black" BorderThickness="2" CornerRadius="20" Background="#ACACAC">
+    <Border x:Name="AddBorder" BorderBrush="Black" BorderThickness="2" CornerRadius="20" Background="#2C1A0E">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="75"/>
@@ -34,7 +34,7 @@
                     Width="30" Height="30"
                     Background="Transparent"
                     BorderThickness="0"
-                    Foreground="#8D4004"
+                    Foreground="{DynamicResource TextBrush}"
                     FontSize="16"
                     Cursor="Hand" 
                     Click="Button_Click"/>
@@ -58,7 +58,7 @@
                 <TextBlock Text="Tytuł:"
                            Grid.Row="0" Grid.Column="0"
                            VerticalAlignment="Center"
-                           Foreground="#2B2B2B"
+                           Foreground="{DynamicResource SubTextBrush}"
                            FontSize="14" FontWeight="SemiBold"/>
                 <TextBox x:Name="TytulBox"
                          Grid.Row="0" Grid.Column="1"
@@ -81,7 +81,7 @@
                 <TextBlock Text="Gatunek:"
                            Grid.Row="1" Grid.Column="0"
                            VerticalAlignment="Center"
-                           Foreground="#2B2B2B"
+                           Foreground="{DynamicResource SubTextBrush}"
                            FontSize="14" FontWeight="SemiBold"/>
                 <ComboBox x:Name="GatunekBox"
                           Grid.Row="1" Grid.Column="1"
@@ -106,7 +106,7 @@
                 <TextBlock Text="Rok produkcji:"
                            Grid.Row="2" Grid.Column="0"
                            VerticalAlignment="Center"
-                           Foreground="#2B2B2B"
+                           Foreground="{DynamicResource SubTextBrush}"
                            FontSize="14" FontWeight="SemiBold"/>
                 <TextBox x:Name="RokBox"
                          Grid.Row="2" Grid.Column="1"
@@ -132,7 +132,7 @@
                 <TextBlock Text="Ocena:"
                            Grid.Row="3" Grid.Column="0"
                            VerticalAlignment="Center"
-                           Foreground="#2B2B2B"
+                           Foreground="{DynamicResource SubTextBrush}"
                            FontSize="14" FontWeight="SemiBold"/>
                 <ComboBox x:Name="OcenaBox"
                           Grid.Row="3" Grid.Column="1"
@@ -152,7 +152,7 @@
                 <TextBlock Text="Status:"
                            Grid.Row="4" Grid.Column="0"
                            VerticalAlignment="Center"
-                           Foreground="#2B2B2B"
+                           Foreground="{DynamicResource SubTextBrush}"
                            FontSize="14" FontWeight="SemiBold"/>
                 <ComboBox x:Name="StatusBox"
                           Grid.Row="4" Grid.Column="1"

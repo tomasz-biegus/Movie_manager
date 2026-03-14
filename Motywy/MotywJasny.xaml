@@ -1,7 +1,10 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <SolidColorBrush x:Key="ButtonBrush"        Color="#FFFFFF"/>
-    <SolidColorBrush x:Key="TextBrush"         Color="#8D4004"/>
-    <SolidColorBrush x:Key="SubTextBrush"      Color="#724725"/>
-    <SolidColorBrush x:Key="MenuHoverBrush"    Color="#9CA2AC"/>
+    <!-- Tekst główny -->
+    <SolidColorBrush x:Key="TextBrush"          Color="#8D4004"/>
+    <!-- Tekst drugorzędny -->
+    <SolidColorBrush x:Key="SubTextBrush"       Color="#A0522D"/>
+    <!-- Hover menu bocznego -->
+    <SolidColorBrush x:Key="MenuHoverBrush"     Color="#E8C9A0"/>
 </ResourceDictionary>

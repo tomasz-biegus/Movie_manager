@@ -17,7 +17,7 @@
     </Window.DataContext>
     
     <!--grid-->
-    <Border x:Name="MainBorder"  BorderBrush="Black" BorderThickness="1" CornerRadius="10" Background="#CDCDCD">
+    <Border x:Name="MainBorder"  BorderBrush="Black" BorderThickness="1" CornerRadius="10" Background="#452916">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
