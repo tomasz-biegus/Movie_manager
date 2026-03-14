@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projekt_prog.WMW.ModeleWidokow;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace Projekt_prog.WMW.Widoki
         public ObejrzaneView()
         {
             InitializeComponent();
+            DataContext = new ObejrzaneViewModel();
         }
     }
 }

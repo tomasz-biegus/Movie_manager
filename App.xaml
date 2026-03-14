@@ -8,8 +8,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="TextBoxWyszukiwarka.xaml"/>
-                <ResourceDictionary Source="Przyciski.xaml"/>
+                <ResourceDictionary Source="Motywy/TextBoxWyszukiwarka.xaml"/>
+                <ResourceDictionary Source="Motywy/Przyciski.xaml"/>
                 <ResourceDictionary Source="Motywy/MotywCiemny.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 

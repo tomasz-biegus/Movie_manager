@@ -34,9 +34,21 @@ namespace Projekt_prog.WMW.ModeleWidokow
             }
         }
 
-    
+        public void OdswiezWidok()
+        {
+            if (CurrentView is DoObejrzeniaViewModel)
+            {
+                DoObejrzeniaVM = new DoObejrzeniaViewModel();
+                CurrentView = DoObejrzeniaVM;
+            }
+            else if (CurrentView is ObejrzaneViewModel)
+            {
+                ObejrzaneVM = new ObejrzaneViewModel();
+                CurrentView = ObejrzaneVM;
+            }
+        }
 
-    public MainViewModel()
+        public MainViewModel()
         {
             DoObejrzeniaVM = new DoObejrzeniaViewModel();
             ObejrzaneVM = new ObejrzaneViewModel();

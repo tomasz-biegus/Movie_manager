@@ -6,12 +6,79 @@
              xmlns:local="clr-namespace:Projekt_prog.WMW.Widoki"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel>
+    <StackPanel Margin="20">
         <TextBlock Text="Obejrzane"
                    HorizontalAlignment="Left"
                    Margin="0,0,0,20"
                    Foreground="{DynamicResource SubTextBrush}"
                    FontSize="34"
                    FontWeight="ExtraBold"/>
+
+        <ListView x:Name="FilmyList"
+                  ItemsSource="{Binding Filmy}"
+                  Background="Transparent"
+                  BorderThickness="0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="{DynamicResource ButtonBrush}"
+                            CornerRadius="10"
+                            Padding="15,10"
+                            Margin="0,0,0,8">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Tytuł i szczegóły -->
+                            <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                                <TextBlock Text="{Binding Tytul}"
+                                           Foreground="{DynamicResource TextBrush}"
+                                           FontSize="16"
+                                           FontWeight="Bold"/>
+                                <TextBlock Foreground="{DynamicResource SubTextBrush}"
+                                           FontSize="12"
+                                           Margin="0,4,0,0">
+                                    <Run Text="{Binding Gatunek}"/>
+                                    <Run Text=" • "/>
+                                    <Run Text="{Binding Rok}"/>
+                                </TextBlock>
+                            </StackPanel>
+
+                            <!-- Ocena -->
+                            <TextBlock Grid.Column="1"
+                                       Text="{Binding Ocena}"
+                                       Foreground="{DynamicResource SubTextBrush}"
+                                       FontSize="13"
+                                       VerticalAlignment="Center"
+                                       Margin="10,0"/>
+
+                            <!-- Status -->
+                            <Border Grid.Column="2"
+                                    Background="{DynamicResource TloBrush}"
+                                    CornerRadius="6"
+                                    Padding="10,4"
+                                    VerticalAlignment="Center"
+                                    Margin="10,0">
+                                <TextBlock Text="{Binding Status}"
+                                           Foreground="#8D4004"
+                                           FontSize="12"
+                                           FontWeight="SemiBold"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Padding" Value="0"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
     </StackPanel>
 </UserControl>

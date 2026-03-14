@@ -136,7 +136,7 @@
                 Margin="0,0,0,0"
                 Cursor="Hand" 
                 Style="{StaticResource PrzyciskMenu}"
-                />
+                Click="UsunFilm"/>
 
             <Button Grid.Column="1"
                 Content="Edytuj"
