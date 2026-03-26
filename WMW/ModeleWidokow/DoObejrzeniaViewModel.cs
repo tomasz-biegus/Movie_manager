@@ -1,23 +1,19 @@
 ﻿using Projekt_prog.Model;
 using Projekt_prog.Repositories;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows;
 
 namespace Projekt_prog.WMW.ModeleWidokow
 {
-    class ObejrzaneViewModel : ObsObject
+    class DoObejrzeniaViewModel : ObsObject
     {
-        // Pobieranie danych z repozytorium i filtrowanie tylko tych, które są oznaczone jako "Obejrzany"
+        // Repozytorium do zarządzania danymi filmów
         private readonly IFilmRepository _repo;
-        private List<Film> _wszystkieFilmy = new();
-        
+        internal List<Film> _wszystkieFilmy = new();
         public ObservableCollection<Film> Filmy { get; set; } = new ObservableCollection<Film>();
 
-        public ObejrzaneViewModel()
+        public DoObejrzeniaViewModel()
         {
             // Inicjalizacja repozytorium i wczytanie filmów
             _repo = new FilmRepository();
@@ -48,5 +44,6 @@ namespace Projekt_prog.WMW.ModeleWidokow
             foreach (var film in przefiltrowane)
                 Filmy.Add(film);
         }
+
     }
 }

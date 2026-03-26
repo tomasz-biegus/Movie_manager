@@ -120,5 +120,17 @@ namespace Projekt_prog
             }
             return null;
         }
+
+        private void Wyszukiwarka_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string fraza = WyszukiwarkaBox.Text.ToLower();
+            var mainVM = DataContext as MainViewModel;
+            if (mainVM == null) return;
+
+            if (mainVM.CurrentView is DoObejrzeniaViewModel doVM)
+                doVM.Filtruj(fraza);
+            else if (mainVM.CurrentView is ObejrzaneViewModel obVM)
+                obVM.Filtruj(fraza);
+        }
     }
 }
