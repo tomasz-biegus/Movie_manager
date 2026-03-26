@@ -24,7 +24,6 @@ namespace Projekt_prog.WMW.Widoki
         public ObejrzaneView()
         {
             InitializeComponent();
-            DataContext = new ObejrzaneViewModel();
         }
     }
 }

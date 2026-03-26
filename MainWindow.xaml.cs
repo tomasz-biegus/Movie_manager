@@ -64,8 +64,6 @@ namespace Projekt_prog
         {
             this.Close();
         }
-
-        // metoda do usuwania filmu, sprawdza który widok jest aktywny i usuwa wybrany film z bazy danych
         private void UsunFilm(object sender, RoutedEventArgs e)
         {
  
