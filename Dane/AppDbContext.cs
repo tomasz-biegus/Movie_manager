@@ -10,6 +10,7 @@ namespace Projekt_prog.Dane
 {
     public class AppDbContext : DbContext
     {
+        // Zarządzanie połączeniem z bazą SQLite i dostępem do tabel.
         public DbSet<Film> Filmy { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)

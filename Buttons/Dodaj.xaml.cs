@@ -39,6 +39,7 @@ namespace Projekt_prog
         // przycisk zapisz
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            // sprawdza czy tytuł jest podany
             if (string.IsNullOrWhiteSpace(TytulBox.Text))
             {
                 MessageBox.Show("Podaj tytuł filmu!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Warning);

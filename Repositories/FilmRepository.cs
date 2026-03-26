@@ -10,10 +10,12 @@ namespace Projekt_prog.Repositories
 {
     public class FilmRepository : IFilmRepository
     {
+        //wykonuje operacje na bazie danych, korzystając z Entity Framework Core
         private readonly AppDbContext _context;
 
         public FilmRepository()
         {
+            // Inicjalizacja kontekstu bazy danych i zapewnienie, że baza jest utworzona
             _context = new AppDbContext();
             _context.Database.EnsureCreated();
         }

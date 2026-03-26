@@ -25,6 +25,7 @@ namespace Projekt_prog
 
         private void OpenWindowDodaj(object sender, RoutedEventArgs e)
         {
+            // Otwórz okno dodawania filmu
             var okno = new Dodaj();
             okno.AddBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(App.AktualnyKolor));
 
@@ -34,6 +35,7 @@ namespace Projekt_prog
         }
         private void OpenWindowEdytuj(object sender, RoutedEventArgs e)
         {
+            // Pobierz wybrany film z HomeView lub ObejrzaneView
             Film? wybrany = null;
 
             var homeView = FindVisualChild<HomeView>(this);
@@ -66,7 +68,7 @@ namespace Projekt_prog
         }
         private void UsunFilm(object sender, RoutedEventArgs e)
         {
- 
+            // Pobierz wybrany film z HomeView lub ObejrzaneView
             var homeView = FindVisualChild<HomeView>(this);
             var obejrzaneView = FindVisualChild<ObejrzaneView>(this);
 
@@ -106,6 +108,7 @@ namespace Projekt_prog
 
         private static T? FindVisualChild<T>(DependencyObject parent) where T : DependencyObject
         {
+            // Rekurencyjnie przeszukaj drzewo wizualne, aby znaleźć dziecko typu T
             for (int i = 0; i < VisualTreeHelper.GetChildrenCount(parent); i++)
             {
                 var child = VisualTreeHelper.GetChild(parent, i);

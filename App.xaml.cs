@@ -9,10 +9,12 @@ namespace Projekt_prog
     /// </summary>
     public partial class App : Application
     {
+        // Przechowuje aktualny kolor motywu, domyślnie jasny
         public static string AktualnyKolor { get; set; } = "#CDCDCD";
 
         public static void ZmienMotyw(bool ciemny)
         {
+            // Ustal URI do odpowiedniego motywu
             var uri = ciemny
                 ? new Uri("Motywy/MotywCiemny.xaml", UriKind.Relative)
                 : new Uri("Motywy/MotywJasny.xaml", UriKind.Relative);

@@ -9,6 +9,7 @@ namespace Projekt_prog.Repositories
 {
     public interface IFilmRepository
     {
+        // Metody do zarządzania filmami
         IEnumerable<Film> PobierzWszystkie();
         Film? PobierzPoId(int id);
         void Dodaj(Film film);

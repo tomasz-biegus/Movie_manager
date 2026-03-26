@@ -10,6 +10,7 @@ namespace Projekt_prog
 {
     class ObsObject : INotifyPropertyChanged
     {
+        // automatyczne powiadamianie widoku o zmianach
         public event PropertyChangedEventHandler? PropertyChanged;
 
         protected void OnPropertyChanged([CallerMemberName] string? name = null)

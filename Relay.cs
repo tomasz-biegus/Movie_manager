@@ -9,6 +9,7 @@ namespace Projekt_prog
 {
     class Relay : ICommand
     {
+        // Pozwala bindować metody z ViewModelu do przycisków w XAML
         private Action<object?> _execute;
         private Func<object?, bool>? _canExecute;
 

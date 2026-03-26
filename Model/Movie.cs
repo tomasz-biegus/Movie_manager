@@ -8,6 +8,7 @@ namespace Projekt_prog.Model
 {
     public class Film
     {
+        //model daanychch filmu, który będzie przechowywany w bazie danych
         public int Id { get; set; }
         public string Tytul { get; set; } = string.Empty;
         public string Gatunek { get; set; } = string.Empty;

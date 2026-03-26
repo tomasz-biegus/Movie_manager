@@ -8,7 +8,7 @@ namespace Projekt_prog.WMW.ModeleWidokow
 {
     class MainViewModel : ObsObject
     {
-
+        // Komendy do przełączania widoków
         public Relay DoObejrzeniaViewCommand { get; set; }
 
         public Relay ObejrzaneViewCommand { get; set; }
@@ -26,6 +26,7 @@ namespace Projekt_prog.WMW.ModeleWidokow
 
         public object CurrentView
         {
+            // Zwraca aktualnie wyświetlany widok
             get { return _currentView; }
             set
             {
@@ -36,6 +37,7 @@ namespace Projekt_prog.WMW.ModeleWidokow
 
         public void OdswiezWidok()
         {
+            // Odświeża aktualny widok, tworząc nową instancję odpowiedniego ViewModelu
             if (CurrentView is DoObejrzeniaViewModel)
             {
                 DoObejrzeniaVM = new DoObejrzeniaViewModel();
@@ -50,6 +52,7 @@ namespace Projekt_prog.WMW.ModeleWidokow
 
         public MainViewModel()
         {
+            // Inicjalizacja ViewModeli i ustawienie domyślnego widoku
             DoObejrzeniaVM = new DoObejrzeniaViewModel();
             ObejrzaneVM = new ObejrzaneViewModel();
             UstawieniaVM = new UstawieniaViewModel();
