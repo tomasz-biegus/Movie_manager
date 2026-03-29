@@ -10,7 +10,7 @@ namespace Projekt_prog
     public partial class App : Application
     {
         // Przechowuje aktualny kolor motywu, domyślnie jasny
-        public static string AktualnyKolor { get; set; } = "#CDCDCD";
+        public static string AktualnyKolor { get; set; } = "#452916";
 
         public static void ZmienMotyw(bool ciemny)
         {
